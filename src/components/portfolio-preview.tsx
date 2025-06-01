@@ -101,7 +101,7 @@ export function PortfolioPreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group relative bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video bg-gradient-to-br from-ai-blue/20 to-creative-red/20">
@@ -154,7 +154,7 @@ export function PortfolioPreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group relative bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video bg-gradient-to-br from-muted/20 to-accent/20">

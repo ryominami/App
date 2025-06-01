@@ -62,7 +62,7 @@ export function BlogPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+              className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
             >
               {/* Header */}
               <div className="p-6 pb-4">
@@ -124,7 +124,7 @@ export function BlogPreview() {
         >
           <Link
             href="/blog"
-            className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-border hover:border-ai-blue hover:bg-ai-blue/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-gray-200 dark:border-gray-700 hover:border-ai-blue hover:bg-ai-blue/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
           >
             <span>全ての記事を見る</span>
             <ArrowRight size={20} />

@@ -52,7 +52,7 @@ export function FAQ() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-card border border-border rounded-xl p-8"
+      className="bg-card border border-gray-200 dark:border-gray-700 rounded-xl p-8"
     >
       <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
         よくあるご質問
@@ -65,7 +65,7 @@ export function FAQ() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="border border-border rounded-lg overflow-hidden"
+            className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden"
           >
             <button
               onClick={() => toggleQuestion(index)}

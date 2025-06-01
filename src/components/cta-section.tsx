@@ -60,7 +60,7 @@ export function CTASection() {
               </Link>
               <Link
                 href="mailto:contact@example.com"
-                className="px-8 py-4 border-2 border-border hover:border-ai-blue hover:bg-ai-blue/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+                className="px-8 py-4 border-2 border-gray-200 dark:border-gray-700 hover:border-ai-blue hover:bg-ai-blue/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
               >
                 <Mail size={20} />
                 <span>メールで問い合わせ</span>
@@ -75,7 +75,7 @@ export function CTASection() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
             >
-              <div className="text-center p-6 bg-card/50 border border-border rounded-lg">
+              <div className="text-center p-6 bg-card/50 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <div className="w-12 h-12 bg-ai-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-ai-blue">24h</span>
                 </div>
@@ -83,7 +83,7 @@ export function CTASection() {
                 <p className="text-sm text-muted-foreground">お問い合わせから24時間以内に初回返信</p>
               </div>
 
-              <div className="text-center p-6 bg-card/50 border border-border rounded-lg">
+              <div className="text-center p-6 bg-card/50 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <div className="w-12 h-12 bg-creative-red/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-creative-red">∞</span>
                 </div>
@@ -91,7 +91,7 @@ export function CTASection() {
                 <p className="text-sm text-muted-foreground">満足いただけるまで何度でも修正対応</p>
               </div>
 
-              <div className="text-center p-6 bg-card/50 border border-border rounded-lg">
+              <div className="text-center p-6 bg-card/50 border border-gray-200 dark:border-gray-700 rounded-lg">
                 <div className="w-12 h-12 bg-ai-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-ai-blue">100%</span>
                 </div>

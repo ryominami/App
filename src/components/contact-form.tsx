@@ -158,7 +158,7 @@ export function ContactForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-card border border-border rounded-xl p-8"
+      className="bg-card border border-gray-200 dark:border-gray-700 rounded-xl p-8"
     >
       <h2 className="text-2xl font-bold text-foreground mb-6">お問い合わせフォーム</h2>
       
@@ -175,7 +175,7 @@ export function ContactForm() {
               required
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
               placeholder="山田 太郎"
             />
           </div>
@@ -190,7 +190,7 @@ export function ContactForm() {
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
               placeholder="example@company.com"
             />
           </div>
@@ -206,7 +206,7 @@ export function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
               placeholder="株式会社○○"
             />
           </div>
@@ -220,7 +220,7 @@ export function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
               placeholder="03-1234-5678"
             />
           </div>
@@ -237,7 +237,7 @@ export function ContactForm() {
               required
               value={formData.service}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
             >
               <option value="">選択してください</option>
               <option value="video-production">AI動画制作</option>
@@ -256,7 +256,7 @@ export function ContactForm() {
               name="budget"
               value={formData.budget}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
             >
               <option value="">選択してください</option>
               <option value="under-50000">5万円未満</option>
@@ -276,7 +276,7 @@ export function ContactForm() {
               name="deadline"
               value={formData.deadline}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+              className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
             >
               <option value="">選択してください</option>
               <option value="urgent">急ぎ（1週間以内）</option>
@@ -298,7 +298,7 @@ export function ContactForm() {
             rows={6}
             value={formData.description}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors resize-none"
+            className="w-full px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors resize-none"
             placeholder="制作したい動画の内容、用途、参考動画、特別な要望などを詳しくお聞かせください。"
           />
         </div>
@@ -310,7 +310,7 @@ export function ContactForm() {
           </label>
           <div
             className={`file-upload border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer ${
-              isDragOver ? 'border-ai-blue bg-ai-blue/5' : 'border-border hover:border-ai-blue/50'
+              isDragOver ? 'border-ai-blue bg-ai-blue/5' : 'border-gray-200 dark:border-gray-700 hover:border-ai-blue/50'
             }`}
             onDrop={handleDrop}
             onDragOver={handleDragOver}
