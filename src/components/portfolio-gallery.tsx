@@ -110,7 +110,7 @@ export function PortfolioGallery() {
       <div className="mb-8">
         <button
           onClick={() => setShowFilters(!showFilters)}
-          className="md:hidden flex items-center space-x-2 mb-4 px-4 py-2 bg-card border border-border rounded-lg"
+          className="md:hidden flex items-center space-x-2 mb-4 px-4 py-2 bg-card border border-gray-200 dark:border-gray-700 rounded-lg"
         >
           <Filter size={16} />
           <span>フィルター</span>
@@ -128,7 +128,7 @@ export function PortfolioGallery() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     selectedCategory === category
                       ? 'bg-ai-blue text-white'
-                      : 'bg-card border border-border hover:border-ai-blue text-foreground'
+                      : 'bg-card border border-gray-200 dark:border-gray-700 hover:border-ai-blue text-foreground'
                   }`}
                 >
                   {category}
@@ -148,7 +148,7 @@ export function PortfolioGallery() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     selectedTool === tool
                       ? 'bg-creative-red text-white'
-                      : 'bg-card border border-border hover:border-creative-red text-foreground'
+                      : 'bg-card border border-gray-200 dark:border-gray-700 hover:border-creative-red text-foreground'
                   }`}
                 >
                   {tool}
@@ -177,7 +177,7 @@ export function PortfolioGallery() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group relative bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video bg-gradient-to-br from-ai-blue/20 to-creative-red/20">
@@ -236,7 +236,7 @@ export function PortfolioGallery() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group relative bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video bg-gradient-to-br from-muted/20 to-accent/20">

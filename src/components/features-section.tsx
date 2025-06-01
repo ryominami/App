@@ -71,7 +71,7 @@ export function FeaturesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group p-6 bg-card border border-border rounded-xl hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+              className="group p-6 bg-card border border-gray-200 dark:border-gray-700 rounded-xl hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
             >
               <div className="flex items-start space-x-4">
                 <div className={`p-3 rounded-lg bg-gradient-to-br from-background to-accent group-hover:scale-110 transition-transform duration-300`}>
@@ -100,19 +100,19 @@ export function FeaturesSection() {
         >
           <h3 className="text-xl font-semibold mb-8 text-foreground">使用AIツール</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="px-6 py-3 bg-card border border-border rounded-lg">
+            <div className="px-6 py-3 bg-card border border-gray-200 dark:border-gray-700 rounded-lg">
               <span className="font-medium">Runway</span>
             </div>
-            <div className="px-6 py-3 bg-card border border-border rounded-lg">
+            <div className="px-6 py-3 bg-card border border-gray-200 dark:border-gray-700 rounded-lg">
               <span className="font-medium">Pika Labs</span>
             </div>
-            <div className="px-6 py-3 bg-card border border-border rounded-lg">
+            <div className="px-6 py-3 bg-card border border-gray-200 dark:border-gray-700 rounded-lg">
               <span className="font-medium">Stable Video Diffusion</span>
             </div>
-            <div className="px-6 py-3 bg-card border border-border rounded-lg">
+            <div className="px-6 py-3 bg-card border border-gray-200 dark:border-gray-700 rounded-lg">
               <span className="font-medium">Leonardo AI</span>
             </div>
-            <div className="px-6 py-3 bg-card border border-border rounded-lg">
+            <div className="px-6 py-3 bg-card border border-gray-200 dark:border-gray-700 rounded-lg">
               <span className="font-medium">Midjourney</span>
             </div>
           </div>

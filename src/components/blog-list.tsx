@@ -98,14 +98,14 @@ export function BlogList() {
             placeholder="記事を検索..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
+            className="w-full pl-10 pr-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-lg focus:border-ai-blue focus:ring-1 focus:ring-ai-blue transition-colors"
           />
         </div>
 
         {/* Mobile filter toggle */}
         <button
           onClick={() => setShowFilters(!showFilters)}
-          className="md:hidden flex items-center space-x-2 mb-4 px-4 py-2 bg-card border border-border rounded-lg"
+          className="md:hidden flex items-center space-x-2 mb-4 px-4 py-2 bg-card border border-gray-200 dark:border-gray-700 rounded-lg"
         >
           <Filter size={16} />
           <span>カテゴリー</span>
@@ -122,7 +122,7 @@ export function BlogList() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   selectedCategory === category
                     ? 'bg-ai-blue text-white'
-                    : 'bg-card border border-border hover:border-ai-blue text-foreground'
+                    : 'bg-card border border-gray-200 dark:border-gray-700 hover:border-ai-blue text-foreground'
                 }`}
               >
                 {category}
@@ -150,7 +150,7 @@ export function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -214,7 +214,7 @@ export function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">

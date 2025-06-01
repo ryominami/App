@@ -53,7 +53,7 @@ export function ContactInfo() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-card border border-border rounded-xl p-6"
+        className="bg-card border border-gray-200 dark:border-gray-700 rounded-xl p-6"
       >
         <h3 className="text-lg font-semibold text-foreground mb-6">直接お問い合わせ</h3>
         <div className="space-y-4">
@@ -88,7 +88,7 @@ export function ContactInfo() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="bg-card border border-border rounded-xl p-6"
+        className="bg-card border border-gray-200 dark:border-gray-700 rounded-xl p-6"
       >
         <h3 className="text-lg font-semibold text-foreground mb-6">対応時間</h3>
         <div className="space-y-4">
@@ -120,7 +120,7 @@ export function ContactInfo() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="bg-card border border-border rounded-xl p-6"
+        className="bg-card border border-gray-200 dark:border-gray-700 rounded-xl p-6"
       >
         <h3 className="text-lg font-semibold text-foreground mb-4">営業時間</h3>
         <div className="space-y-2 text-sm">
@@ -145,7 +145,7 @@ export function ContactInfo() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="bg-gradient-to-br from-ai-blue/10 to-creative-red/10 border border-border rounded-xl p-6 text-center"
+        className="bg-gradient-to-br from-ai-blue/10 to-creative-red/10 border border-gray-200 dark:border-gray-700 rounded-xl p-6 text-center"
       >
         <h3 className="text-lg font-semibold text-foreground mb-2">まずは無料相談から</h3>
         <p className="text-sm text-muted-foreground mb-4">

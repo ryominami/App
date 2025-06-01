@@ -50,7 +50,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="relative max-w-4xl mx-auto"
           >
-            <div className="video-container bg-card border border-border shadow-2xl">
+            <div className="video-container bg-card border border-gray-200 dark:border-gray-700 shadow-2xl">
               <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-ai-blue/20 to-creative-red/20">
                 <div className="text-center space-y-4">
                   <div className="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
@@ -79,7 +79,7 @@ export function HeroSection() {
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-4 border-2 border-border hover:border-ai-blue hover:bg-ai-blue/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 border-2 border-gray-200 dark:border-gray-700 hover:border-ai-blue hover:bg-ai-blue/10 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
               お問い合わせ
             </Link>
