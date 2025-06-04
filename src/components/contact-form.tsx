@@ -119,16 +119,25 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      // Here you would typically send the data to your API
-      console.log('Form data:', formData)
-      console.log('Uploaded files:', uploadedFiles)
-      
+      const data = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        if (key !== 'files') {
+          data.append(key, value as string)
+        }
+      })
+      uploadedFiles.forEach(({ file }) => {
+        data.append('files', file)
+      })
+
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: data,
+      })
+
+      if (!res.ok) throw new Error('Upload failed')
+
       setSubmitStatus('success')
-      
-      // Reset form after successful submission
+
       setTimeout(() => {
         setFormData({
           name: '',
@@ -144,7 +153,6 @@ export function ContactForm() {
         setUploadedFiles([])
         setSubmitStatus('idle')
       }, 3000)
-      
     } catch (error) {
       setSubmitStatus('error')
       setTimeout(() => setSubmitStatus('idle'), 3000)

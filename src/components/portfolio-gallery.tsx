@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Play, Eye, Clock, Filter } from 'lucide-react'
 
@@ -94,6 +94,13 @@ export function PortfolioGallery() {
   const [selectedCategory, setSelectedCategory] = useState('全て')
   const [selectedTool, setSelectedTool] = useState('全て')
   const [showFilters, setShowFilters] = useState(false)
+  const [uploadedVideos, setUploadedVideos] = useState<string[]>([])
+
+  useEffect(() => {
+    fetch('/api/videos')
+      .then(res => res.json())
+      .then(data => setUploadedVideos(data.files))
+  }, [])
 
   const filteredItems = portfolioItems.filter(item => {
     const categoryMatch = selectedCategory === '全て' || item.category === selectedCategory
@@ -273,6 +280,26 @@ export function PortfolioGallery() {
                     </div>
                   </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {uploadedVideos.length > 0 && (
+        <div className="mt-12">
+          <h2 className="text-xl font-semibold mb-6 text-foreground">アップロード作品</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {uploadedVideos.map((src, index) => (
+              <motion.div
+                key={src}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden"
+              >
+                <video src={src} controls className="w-full rounded-b-xl" />
               </motion.div>
             ))}
           </div>

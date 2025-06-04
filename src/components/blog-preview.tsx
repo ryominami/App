@@ -3,36 +3,7 @@
 import { motion } from 'framer-motion'
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
 import Link from 'next/link'
-
-const blogPosts = [
-  {
-    id: 1,
-    title: 'Runway Gen-3 Alpha完全ガイド：最新AI動画生成の使い方と活用法',
-    excerpt: 'RunwayのGen-3 Alphaの新機能と実際の制作ワークフローを詳しく解説。プロンプトのコツから品質向上テクニックまで。',
-    category: 'ツールレビュー',
-    readTime: '8分',
-    publishedAt: '2025年5月28日',
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'AI動画制作の料金相場2025年版：予算別プラン選択ガイド',
-    excerpt: '企業向けAI動画制作の最新料金動向と、予算に応じた最適なプラン選択方法をご紹介します。',
-    category: '業界分析',
-    readTime: '6分',
-    publishedAt: '2025年5月25日',
-    featured: true
-  },
-  {
-    id: 3,
-    title: 'Pika Labs vs Stable Video Diffusion：特徴比較と使い分け方法',
-    excerpt: '人気のAI動画生成ツール2つを徹底比較。それぞれの強みと適用シーンを具体例とともに解説。',
-    category: 'ツール比較',
-    readTime: '10分',
-    publishedAt: '2025年5月22日',
-    featured: true
-  }
-]
+import { blogPosts } from '@/data/blog-posts'
 
 export function BlogPreview() {
   return (

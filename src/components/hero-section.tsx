@@ -26,7 +26,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="gradient-text">AIと創造性の融合</span>
+            <span className="gradient-text-shine">AIと創造性の融合</span>
             <br />
             <span className="text-foreground">次世代動画制作</span>
           </motion.h1>
