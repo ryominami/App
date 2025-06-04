@@ -12,6 +12,7 @@ const navigation = [
   { name: 'ホーム', href: '/' },
   { name: 'ポートフォリオ', href: '/portfolio' },
   { name: 'ブログ', href: '/blog' },
+  { name: '管理', href: '/admin' },
   { name: 'お問い合わせ', href: '/contact' },
 ]
 
