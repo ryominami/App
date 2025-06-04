@@ -84,6 +84,10 @@
   background-clip: text;
 }
 
+.gradient-text-shine {
+  @apply gradient-text bg-[length:200%_auto] animate-shine;
+}
+
 .glass-effect {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
