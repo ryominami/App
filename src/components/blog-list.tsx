@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Clock, Tag, Search, Filter } from 'lucide-react'
-import { blogPosts } from '@/data/blog-posts'
+import { Calendar, Clock, Tag, Search, Filter, ExternalLink } from 'lucide-react'
+import { blogPosts, BlogPost } from '@/data/blog-posts'
 
 const categories = ['全て', 'ツールレビュー', '業界分析', 'ツール比較', 'チュートリアル', '制作日記']
 
@@ -88,7 +88,14 @@ export function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+                onClick={() => {
+                  if (post.isExternal) {
+                    window.open(post.externalUrl, '_blank', 'noopener,noreferrer')
+                  } else {
+                    window.location.href = `/blog/${post.id}`
+                  }
+                }}
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -101,8 +108,11 @@ export function BlogList() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-ai-blue transition-colors mb-3 line-clamp-2">
-                    {post.title}
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-ai-blue transition-colors mb-3 line-clamp-2 flex items-start gap-2">
+                    <span>{post.title}</span>
+                    {post.isExternal && (
+                      <ExternalLink size={16} className="text-muted-foreground flex-shrink-0 mt-1" />
+                    )}
                   </h3>
 
                   <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3">
@@ -152,7 +162,14 @@ export function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+                className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+                onClick={() => {
+                  if (post.isExternal) {
+                    window.open(post.externalUrl, '_blank', 'noopener,noreferrer')
+                  } else {
+                    window.location.href = `/blog/${post.id}`
+                  }
+                }}
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -162,8 +179,11 @@ export function BlogList() {
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-ai-blue transition-colors mb-3 line-clamp-2">
-                    {post.title}
+                  <h3 className="text-lg font-semibold text-foreground group-hover:text-ai-blue transition-colors mb-3 line-clamp-2 flex items-start gap-2">
+                    <span>{post.title}</span>
+                    {post.isExternal && (
+                      <ExternalLink size={14} className="text-muted-foreground flex-shrink-0 mt-1" />
+                    )}
                   </h3>
 
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">

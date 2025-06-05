@@ -1,4 +1,29 @@
-export const blogPosts = [
+export interface BlogPost {
+  id: string | number
+  title: string
+  excerpt: string
+  category: string
+  readTime: string
+  publishedAt: string
+  featured: boolean
+  tags: string[]
+  externalUrl?: string
+  isExternal?: boolean
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: 'note-8c5f0aa7cbf7',
+    title: 'AI動画制作の実践記録と技術解説',
+    excerpt: 'AI動画制作における実際の制作プロセスと使用技術について詳しく解説。実際のプロジェクトを通じて得られた知見を共有します。',
+    category: '制作日記',
+    readTime: '10分',
+    publishedAt: '2025年6月5日',
+    featured: true,
+    tags: ['AI動画', '制作過程', '技術解説'],
+    externalUrl: 'https://note.com/ryo_873/n/n8c5f0aa7cbf7',
+    isExternal: true
+  },
   {
     id: 1,
     title: 'Runway Gen-3 Alpha完全ガイド：最新AI動画生成の使い方と活用法',
