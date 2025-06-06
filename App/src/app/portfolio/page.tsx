@@ -22,7 +22,20 @@ export default function PortfolioPage() {
         </div>
 
         <PortfolioGallery />
-        <VideoManager />
+        
+        {/* ユーザー投稿セクション */}
+        <div className="mt-20 pt-20 border-t border-border">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              <span className="text-foreground">ユーザー投稿</span>
+              <span className="gradient-text">動画</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              あなたの動画作品をアップロードして、ポートフォリオに追加してください
+            </p>
+          </div>
+          <VideoManager />
+        </div>
       </div>
     </div>
   )

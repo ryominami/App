@@ -44,19 +44,40 @@ export function VideoManager() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         {/* アップロードセクション */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold">動画アップロード</h2>
+          <div className="flex items-center space-x-3">
+            <h2 className="text-2xl font-bold">動画アップロード</h2>
+            <span className="px-3 py-1 bg-ai-blue/10 text-ai-blue text-sm font-medium rounded-full">
+              {videos.length}件
+            </span>
+          </div>
           <VideoUpload onUpload={handleUpload} />
         </div>
 
         {/* 動画一覧セクション */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold">動画一覧</h2>
-          <div className="grid grid-cols-1 gap-4">
-            {videos.map((video) => (
+          <h2 className="text-2xl font-bold">
+            {videos.length === 0 ? 'アップロード履歴' : `アップロード済み動画 (${videos.length}件)`}
+          </h2>
+          
+          {videos.length === 0 ? (
+            <div className="text-center py-12 bg-card border border-dashed border-border rounded-xl">
+              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-9 0v14a2 2 0 002 2h6a2 2 0 002-2V4M9 8v6m6-6v6" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-medium text-foreground mb-2">まだ動画がありません</h3>
+              <p className="text-muted-foreground">
+                左側のアップロードエリアから動画をアップロードしてください
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-4 max-h-96 overflow-y-auto pr-2">
+              {videos.map((video) => (
               <div
                 key={video.id}
                 className="card-hover p-6 border border-border rounded-xl bg-card transition-all duration-300"
@@ -96,8 +117,9 @@ export function VideoManager() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

@@ -11,6 +11,7 @@ import { clsx } from 'clsx'
 const navigation = [
   { name: 'ホーム', href: '/' },
   { name: 'ポートフォリオ', href: '/portfolio' },
+  { name: '動画アップロード', href: '/upload' },
   { name: 'ブログ', href: '/blog' },
   { name: 'お問い合わせ', href: '/contact' },
 ]
