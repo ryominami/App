@@ -1,9 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, Tag, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import { blogPosts } from '@/data/blog-posts'
+import { blogPosts, BlogPost } from '@/data/blog-posts'
 
 export function BlogPreview() {
   return (
@@ -33,7 +33,14 @@ export function BlogPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg"
+              className="group bg-card border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-ai-blue/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+              onClick={() => {
+                if (post.isExternal) {
+                  window.open(post.externalUrl, '_blank', 'noopener,noreferrer')
+                } else {
+                  window.location.href = `/blog/${post.id}`
+                }
+              }}
             >
               {/* Header */}
               <div className="p-6 pb-4">
@@ -49,8 +56,11 @@ export function BlogPreview() {
                   )}
                 </div>
 
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-ai-blue transition-colors mb-3 line-clamp-2">
-                  {post.title}
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-ai-blue transition-colors mb-3 line-clamp-2 flex items-start gap-2">
+                  <span>{post.title}</span>
+                  {post.isExternal && (
+                    <ExternalLink size={14} className="text-muted-foreground flex-shrink-0 mt-1" />
+                  )}
                 </h3>
 
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
@@ -73,13 +83,25 @@ export function BlogPreview() {
 
               {/* Footer */}
               <div className="px-6 pb-6">
-                <Link
-                  href={`/blog/${post.id}`}
-                  className="inline-flex items-center text-sm text-ai-blue hover:text-ai-blue/80 transition-colors"
-                >
-                  続きを読む
-                  <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                {post.isExternal ? (
+                  <a
+                    href={post.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm text-ai-blue hover:text-ai-blue/80 transition-colors"
+                  >
+                    noteで読む
+                    <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                ) : (
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="inline-flex items-center text-sm text-ai-blue hover:text-ai-blue/80 transition-colors"
+                  >
+                    続きを読む
+                    <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                )}
               </div>
             </motion.article>
           ))}
